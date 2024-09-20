@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 
 # Ajouter le logo du Paris FC
-st.image("https://parisfc.fr/wp-content/uploads/bis-images/48453/Logo-Paris-FC1-1400x700-f50_50.jpg", width=150)
+st.image("https://parisfc.fr/wp-content/uploads/bis-images/48453/Logo-Paris-FC1-1400x700-f50_50.jpg", width=300)
 
 # Titre de l'application avec la couleur du Paris FC (bleu foncé)
 st.markdown("<h1 style='text-align: center; color: #003366;'>Cahier d'exercices du Paris FC</h1>", unsafe_allow_html=True)
