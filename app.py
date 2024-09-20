@@ -13,6 +13,18 @@ st.write("""
 Bienvenue dans l'application d'exercices du Paris FC. Utilisez les filtres pour rechercher des exercices en fonction de l'intensité, du thème ou du nombre de joueuses.
 """)
 
+# Charger le fichier Excel via un téléverseur
+uploaded_file = st.file_uploader("Téléchargez le fichier Excel des exercices", type=["xlsx"])
+
+if uploaded_file is not None:
+    # Lire le fichier Excel
+    exercises_df = pd.read_excel(uploaded_file)
+
+    # Afficher le tableau
+    st.dataframe(exercises_df)
+else:
+    st.write("Veuillez téléverser un fichier Excel pour voir les exercices.")
+
 # Créer des filtres interactifs
 intensity = st.selectbox("Sélectionnez l'intensité", options=exercises_df['Intensité de travail'].unique())
 theme = st.selectbox("Sélectionnez le thème", options=exercises_df['Thème de l\'exercice'].unique())
